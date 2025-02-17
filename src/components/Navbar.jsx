@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import "../styles/navbar.css"
 
 export function Navbar({cart}) {
   return (
     <div className="navbar">
-      <p>{cart.length}</p>
+      <Link to="shopping-cart">{cart.length}</Link>
     </div>
   );
 }

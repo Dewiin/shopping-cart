@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import { Navbar } from './components/Navbar';
 import './App.css'
 
-export function App() {
-  const [cart, setCart] = useState([]);
+export function App( {cart, setCart} ) {
   const addToCart = (e) => {
     setCart([...cart, e]);
   }
@@ -15,4 +13,3 @@ export function App() {
     </>
   )
 }
-
