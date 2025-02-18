@@ -1,15 +1,18 @@
-import { Navbar } from './components/Navbar';
-import './App.css'
+import { useState } from "react";
+import { Home } from "./components/Home"
+import { Cart } from "./components/Cart";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css"
 
-export function App( {cart, setCart} ) {
-  const addToCart = (e) => {
-    setCart([...cart, e]);
-  }
+export function App() {
+  const [cart, setCart] = useState([]);
 
   return (
-    <>
-      <Navbar cart={cart}></Navbar>
-      <button onClick={e => addToCart(e)}>Add me</button>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home cart={cart} setCart={setCart} />} />
+        <Route path="/shopping-cart" element={<Cart cart={cart} />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
