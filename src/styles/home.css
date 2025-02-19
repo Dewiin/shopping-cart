@@ -4,19 +4,22 @@
     margin: 10vh auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 5vw;
+    gap: 0 5vw;
     justify-content: center;
     align-items: center;
 }
 
 .product-box {
     height: 40vh;
+    min-height: 30rem;
     width: 15vw;
+    min-width: 12rem;
 }
 
 .product-img-container {
-    width: 10vw;
+    width: 80%;
     height: 20vh;
+    min-height: 10rem;
 }
 
 .product-img-wrapper {
@@ -26,4 +29,5 @@
     border: 1px solid;
     border-radius: 20px;
     padding: 2rem 1rem;
+    min-height: 10rem;
 }
