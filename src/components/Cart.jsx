@@ -1,7 +1,19 @@
 import { Navbar } from "./Navbar";
 import "../styles/cart.css";
 
-export function Cart( {cart} ) {
+export function Cart( {cart, setCart} ) {
+    function updateQuantity(product, newQuantity) {
+        setCart((prevCart) => ({
+            ...prevCart, [product]: {...prevCart[product], quantity: newQuantity}
+        }));
+    }   
+
+    function removeProduct(product) {
+        const newCart = {...cart};
+        delete newCart[product];
+        setCart(newCart);
+    }
+
     return (
         <>
             <Navbar cart={cart} />
@@ -14,11 +26,18 @@ export function Cart( {cart} ) {
                     <div className="cart-products-items">
                         {Object.keys(cart).map((product) => (
                             <div key={product}>
-                                <div className="cart-item-image" style={{background: `url(${cart[product].image}) no-repeat`, backgroundSize: `contain`}}/>
+                                <div className="cart-item-image" 
+                                    style={{
+                                        backgroundImage: `url(${cart[product].image})`, 
+                                        backgroundSize: `contain`, 
+                                        backgroundPosition: `center`, 
+                                        backgroundRepeat: `no-repeat`
+                                    }} 
+                                />
                                 <p>{cart[product].title}</p>
-                                <input type="number" min="1" placeholder={cart[product].quantity}></input>
+                                <input type="number" min="1" value={cart[product].quantity} onChange={(e) => updateQuantity(product, e.target.value)}></input>
                                 <p>${cart[product].price.toFixed(2)}</p>
-                                <p className="remove-item">x</p>
+                                <p className="remove-item" onClick={() => removeProduct(product)}>x</p>
                             </div>
                         ))}
                     </div>

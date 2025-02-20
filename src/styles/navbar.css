@@ -1,14 +1,49 @@
 .navbar {
+  font-family: "Do Hyeon", serif;
+  font-size: 24px;
   height: 10vh;
+  min-height: 5rem;
   position: sticky;
-  background-color: #1f1f21;
-  color: #ececec;
+  top: 0;
+  background-color: var(--navbar-background-color);
   display: flex; 
   align-items: center;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: space-between;
 }
 
-.navbar > p {
-  margin: 0;
+.navbar a {
+  text-decoration: none;
+  color: var(--cart-products-background-color);
+  border-bottom: 1px solid #1f1f21;
+  transition: border-color 200ms ease-in-out;
+}
+
+.navbar a:hover {
+  border-bottom: 1px solid var(--cart-products-background-color); 
+}
+
+.navbar-cart {
+  margin-right: 4rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition: transform 200ms ease;
+}
+
+.navbar-cart:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.navbar-cart > a {
+  border: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 5rem;
+  text-decoration: none;
+  color: var(--cart-products-background-color);
 }

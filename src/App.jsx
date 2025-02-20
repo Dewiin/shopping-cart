@@ -10,8 +10,12 @@ export function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home cart={cart} setCart={setCart} />} />
-        <Route path="/shopping-cart" element={<Cart cart={cart} />} />
+        <Route path="/" element={<Home cart={cart} setCart={setCart} filter="none" />} />
+        <Route path="/men" element={<Home cart={cart} setCart={setCart} filter="men" />} />
+        <Route path="/women" element={<Home cart={cart} setCart={setCart} filter="women" />} />
+        <Route path="/electronics" element={<Home cart={cart} setCart={setCart} filter="electronics" />} />
+        <Route path="/jewelery" element={<Home cart={cart} setCart={setCart} filter="jewelery" />} />
+        <Route path="/shopping-cart" element={<Cart cart={cart} setCart={setCart} />} />
       </Routes>
     </BrowserRouter>
   );

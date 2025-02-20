@@ -3,12 +3,21 @@ import { Navbar } from './Navbar';
 import { Product } from './Product';
 import '../styles/home.css'
 
-export function Home( {cart, setCart} ) {
+export function Home( {cart, setCart, filter} ) {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products", {mode: "cors"})
+    const categories = {
+      men: "/category/men's clothing",
+      women: "/category/women's clothing",
+      electronics: "/category/electronics",
+      jewelery: "/category/jewelery",
+    };
+    
+    const path = categories[filter] || "";
+
+    fetch(`https://fakestoreapi.com/products${path}`, {mode: "cors"})
       .then((response) => {
         return response.json();
       })
@@ -18,7 +27,7 @@ export function Home( {cart, setCart} ) {
       .catch((error) => {
         setError(error);
       })
-  }, [])
+  }, [filter])
 
   return (
     <>
