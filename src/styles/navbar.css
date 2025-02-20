@@ -1,12 +1,12 @@
 .navbar {
-  height: 7vh;
+  height: 10vh;
   position: sticky;
-  top: 0;
   background-color: #1f1f21;
   color: #ececec;
   display: flex; 
   align-items: center;
   justify-content: center;
+  gap: 3rem;
 }
 
 .navbar > p {

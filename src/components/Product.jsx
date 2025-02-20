@@ -1,8 +1,19 @@
 import "../styles/home.css"
 
 export function Product( {product, setCart} ) {
-    const addToCart = (e) => {
-        setCart((prevCart) => [...prevCart, e]);
+    const addToCart = (product) => {
+        setCart((prevCart) => {
+            const newCart = {...prevCart};
+
+            if(newCart[product.id]) {
+                newCart[product.id].quantity += 1;
+            }
+            else {
+                newCart[product.id] = {...product, quantity: 1}; 
+            }
+
+            return newCart;
+        });
     };
 
     return (

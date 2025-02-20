@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --border-radius: 20px;
+  --cart-prices-background-color: rgba(200, 200, 200, 0.8);
+  --cart-products-background-color: rgba(255, 255, 255, 0.8);
+  --cart-element-color: rgba(100, 100, 100, 0.5);
+}
+
+* {
+  font-family: "Roboto", serif;
+  box-sizing: content-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-}
-
-body {
-  position: relative;
-  top: 0;
 }

@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css"
 
 export function App() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState({});
 
   return (
     <BrowserRouter>

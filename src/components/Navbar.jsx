@@ -4,7 +4,8 @@ import "../styles/navbar.css"
 export function Navbar({cart}) {
   return (
     <div className="navbar">
-      <Link to="/shopping-cart">{cart.length}</Link>
+      <Link to="/">Home</Link>
+      <Link to="/shopping-cart">{Object.keys(cart).length}</Link>
     </div>
   );
 }
