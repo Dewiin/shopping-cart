@@ -39,6 +39,10 @@
     border-bottom: 1px solid var(--cart-element-color);
 }
 
+.cart-products-items > div:first-child {
+    border-top: 1px solid var(--cart-element-color);
+}
+
 .cart-products-items > div > input {
     width: 3rem;
 }
@@ -65,4 +69,16 @@
     background-color: var(--cart-prices-background-color);
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     border: 1px solid var(--cart-prices-background-color);
+}
+
+.cart-prices > h2 {
+    padding: 2rem 0;
+    margin: 0 1rem;
+    border-bottom: 1px solid var(--cart-element-color)
+}
+
+.cart-total {
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
 }

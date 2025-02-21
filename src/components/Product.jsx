@@ -30,7 +30,7 @@ export function Product( {product, setCart} ) {
             </div>
             <p>{product.title}</p>
             <p>${product.price.toFixed(2)}</p>
-            <p>⭐{product.rating.rate} ({product.rating.count})</p>
+            <p>⭐ {product.rating.rate} ({product.rating.count})</p>
             <button onClick={addToCart}>Add to Cart</button>
         </div>
     );

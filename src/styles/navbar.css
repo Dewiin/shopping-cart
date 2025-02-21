@@ -11,14 +11,14 @@
   justify-content: space-between;
 }
 
-.navbar a {
+.navbar > div > a {
   text-decoration: none;
   color: var(--cart-products-background-color);
   border-bottom: 1px solid #1f1f21;
-  transition: border-color 200ms ease-in-out;
+  transition: border-color 100ms ease-in-out;
 }
 
-.navbar a:hover {
+.navbar> div > a:hover {
   border-bottom: 1px solid var(--cart-products-background-color); 
 }
 
@@ -30,15 +30,13 @@
   justify-content: center;
   align-items: end;
   transition: transform 200ms ease;
+  text-decoration: none;
+  color: var(--cart-products-background-color);
 }
 
 .navbar-cart:hover {
   transform: scale(1.1);
   cursor: pointer;
-}
-
-.navbar-cart > a {
-  border: none;
 }
 
 .navbar-links {
