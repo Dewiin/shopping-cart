@@ -31,6 +31,7 @@
   align-items: end;
   transition: transform 200ms ease;
   text-decoration: none;
+  flex-shrink: 0;
   color: var(--cart-products-background-color);
 }
 
