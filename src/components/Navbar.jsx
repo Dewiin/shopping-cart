@@ -5,10 +5,10 @@ export function Navbar({cart}) {
   return (
     <>
       <div className="navbar">
-
-        <div className="navbar-logo" />
+        <div className="navbar-logo">
+          <Link to="/" >FakeStore</Link>
+        </div>
         <div className="navbar-links">
-          <Link to="/">Home</Link>
           <Link to="/men">Men</Link>
           <Link to="/women">Women</Link>
           <Link to="/electronics">Electronics</Link>
