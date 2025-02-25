@@ -1,8 +1,8 @@
 # Shopping Cart App 
 
 <div align="center">
-    <p style="font-size:64px; margin: 0;">🛒</p>
-    <p style="font-size:32px;">FakeStore</p>
+    <h1>🛒</h1>
+    <h1>FakeStore</h1>
 </div>
 
 <details open>
