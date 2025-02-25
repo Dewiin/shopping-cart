@@ -5,6 +5,23 @@
     <p style="font-size:32px;">FakeStore</p>
 </div>
 
+<details open>
+<summary>Table of Contents</summary>
+<ol>
+    <li>
+    <a href="#introduction">Introduction</a>
+    </li>
+    <li>
+    <a href="#features">Features</a>
+    </li>
+    <li>
+    <a href="#installation--setup">Installation & Setup</a>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+</ol>
+</details>
+
 ## Introduction
 An e-commerce shopping cart project from the Odin curriculum built with React, Vite, and React Router. Users can browse products, add items to the cart, and choose different shipping options.
 <p align="right"><a href="#readme-top">Back to top</a></p>
