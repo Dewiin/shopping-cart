@@ -1,7 +1,7 @@
 # Shopping Cart App 
 
 <div align="center">
-    <h1>🛒</h1>
+    <img src='./public/shopping-logo.png' width=150>
     <h1>FakeStore</h1>
 </div>
 
